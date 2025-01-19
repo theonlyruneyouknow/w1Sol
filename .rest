@@ -3,10 +3,21 @@
 // LOCALHOST
 ###
 send request
-GET http://localhost:8080/contacts
+GET http://localhost:4000/contacts
 ###
 GET http://localhost:4000/contacts/678c735a8e2de64be9771a46
 ###
-GET http://localhost:8080/contacts/622023f642f9ab4cd6e060b3
+GET http://localhost:4000/contacts/678c73608e2de64be9771a47
 ###
-GET http://localhost:8080/contacts/622023f642f9ab4cd6e060b4
+GET http://localhost:4000/contacts/665753f9488a0b829e207e52
+
+
+// PRODUCTION Deploy
+###
+GET https://w1sol.onrender.com/contacts/contacts
+###
+GET https://w1sol.onrender.com/contacts/contacts/678c735a8e2de64be9771a46
+###
+GET https://w1sol.onrender.com/contacts/contacts/678c73608e2de64be9771a47
+###
+GET https://w1sol.onrender.com/contacts/contacts/665753f9488a0b829e207e52
