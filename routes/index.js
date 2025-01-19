@@ -3,6 +3,7 @@ const routes = require('express').Router();
 const baseController = require('../controllers');
 const secondController = require('../controllers/second');
 const myFamilyController = require('../controllers/myFamily');
+const contactController = require('../controllers/contact_test');
 
 routes.get('/wife', myFamilyController.getWife);
 routes.get('/son', myFamilyController.getSon);
@@ -18,6 +19,10 @@ routes.get('/Age', baseController.getAge);
 routes.get('/savanna2', secondController.getSavanna2);
 routes.get('/hannah2', secondController.getHannah2);
 routes.get('/Age2', secondController.getAge2);
+
+
+routes.use('/contacts', require('./contacts'))
+routes.get('/contact', contactController.getContact);
 
 module.exports = routes;
 
