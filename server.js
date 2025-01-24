@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 
+// Add middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 const mongodb = require('./db/connect');
 
 // Set view engine
