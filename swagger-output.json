@@ -14,8 +14,8 @@
   "host": "localhost:4000",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+    "http",
+    "https"
   ],
   "securityDefinitions": {
     "apiKey": {

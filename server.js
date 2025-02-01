@@ -2,10 +2,14 @@ const express = require('express');
 const app = express();
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger-output.json');
+const cors = require('cors');
 
 // Add middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Add CORS middleware
+app.use(cors());
 
 const mongodb = require('./db/connect');
 

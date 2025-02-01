@@ -8,15 +8,13 @@
     "start": "npm run swagger && nodemon server.js",
     "swagger2": "npm run swagger",
     "swagger": "node ./swagger.js",
-    
-  
-
     "start-prod": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",

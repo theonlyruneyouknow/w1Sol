@@ -13,7 +13,13 @@ const doc = {
         },
        
     },
-    host: 'localhost:4000',
+    host: process.env.NODE_ENV === 'production' 
+        ? 'w1sol.onrender.com'
+        : 'localhost:4000',
+    // host: 'localhost:4000',
+    schemes: process.env.NODE_ENV === 'production' 
+    ? ['https'] 
+    : ['http', 'https'],
     basePath: '/',
     // Added HTTPS
     consumes: ['application/json'],
