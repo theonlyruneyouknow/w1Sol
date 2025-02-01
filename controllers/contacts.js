@@ -2,6 +2,8 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res, next) => {
+  // #swagger.tags = ['Contacts']
+  // #swagger.description = 'Endpoint to get all contacts'
   const result = await mongodb.getDb().db().collection('contacts').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
@@ -10,6 +12,8 @@ const getAll = async (req, res, next) => {
 };
 
 const updateContact = async (req, res) => {
+  // #swagger.tags = ['Contacts']
+  // #swagger.description = 'Endpoint to update all contacts'
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const contact = {
@@ -34,6 +38,8 @@ const updateContact = async (req, res) => {
 
 //POST request to get a single contact
 const postsingle = async (req, res, next) => {
+  // #swagger.tags = ['Contacts']
+  // #swagger.description = 'Endpoint to post one contact'
   try {
     const userId = new ObjectId(req.params.id);
     const result = await mongodb
@@ -55,6 +61,8 @@ const postsingle = async (req, res, next) => {
 }
 
 const createContact = async (req, res) => {
+  // #swagger.tags = ['Contacts']
+  // #swagger.description = 'Endpoint to create a contact'
   try {
     const contact = {
       firstName: req.body.firstName,
@@ -83,6 +91,8 @@ const createContact = async (req, res) => {
 
 
 const getSingle = async (req, res) => {
+  // #swagger.tags = ['Contacts']
+  // #swagger.description = 'Endpoint to get one contact'
   try {
     // Validate ID format
     if (!ObjectId.isValid(req.params.id)) {
@@ -110,6 +120,8 @@ const getSingle = async (req, res) => {
 };
 
 const deleteContact = async (req, res) => {
+  // #swagger.tags = ['Contacts']
+  // #swagger.description = 'Endpoint to delete a contact'
   try {
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Invalid contact ID format');

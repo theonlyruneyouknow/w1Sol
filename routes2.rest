@@ -8,6 +8,7 @@ GET http://localhost:4000/contacts/678c73608e2de64be9771a47
 ### Create contact
 POST http://localhost:4000/contacts HTTP/1.1
 content-type: application/json
+
 {
     "firstName":"Ashley",
     "lastName":"Weaver",
@@ -25,10 +26,12 @@ content-type: application/json
   "lastName": "Larsen",
   "email": "sam.larsen@missionary.com",
   "favoriteColor": "Pink",
-  "birthday": "5/5/2001"
+  "birthday": "3/7/2001"
 }
 ### DELETE contact
-DELETE http://localhost:8080/contacts/6220b775099269ff7b31ceab HTTP/1.1
+DELETE http://localhost:4000/contacts/6656935c57018278d00293c7 HTTP/1.1
+
+
 
 // PRODUCTION Deploy
 ### Get all contacts
@@ -53,7 +56,7 @@ content-type: application/json
 
 
 ### PUT contact
-PUT https://w1sol.onrender.com/contacts/6220bcb39cd507e920c75a0b HTTP/1.1
+PUT https://w1sol.onrender.com/contacts/67931a227be3fa850e4227fb HTTP/1.1
 content-type: application/json
 
 {
