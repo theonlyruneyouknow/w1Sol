@@ -11,6 +11,8 @@ const getSavanna = (req, res) => {
   };
 
  const getAge = (req, res) => {
+  // #swagger.tags = ['Contacts']
+  // #swagger.description = 'Endpoint to update all contacts'
     res.send('Age: 30');
   };
 

@@ -118,7 +118,10 @@
     },
     "/Age": {
       "get": {
-        "description": "",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Endpoint to update all contacts",
         "responses": {
           "200": {
             "description": "OK"
