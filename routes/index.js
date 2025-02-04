@@ -4,12 +4,16 @@ const baseController = require('../controllers');
 const secondController = require('../controllers/second');
 const myFamilyController = require('../controllers/myFamily');
 const contactController = require('../controllers/contact_test');
+const medsController = require('../controllers/meds');
 
 routes.get('/wife', myFamilyController.getWife);
 routes.get('/son', myFamilyController.getSon);
 routes.get('/daughter1', myFamilyController.getDaughter1);
 routes.get('/daughter2', myFamilyController.getDaughter2);
 routes.get('/Age3', myFamilyController.getAge3);
+
+
+// routes.get('/meds', medsController.getMeds);
 
 routes.get('/', baseController.getName);
 routes.get('/savanna', baseController.getSavanna);
@@ -23,6 +27,9 @@ routes.get('/Age2', secondController.getAge2);
 
 routes.use('/contacts', require('./contacts'))
 routes.get('/contact', contactController.getContact);
+
+routes.use('/meds', require('./meds'))
+// routes.get('/meds', medsController.getMeds);
 
 module.exports = routes;
 

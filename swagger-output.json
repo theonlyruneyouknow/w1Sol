@@ -38,7 +38,10 @@
   "paths": {
     "/wife": {
       "get": {
-        "description": "",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Endpoint to update all contacts",
         "responses": {
           "200": {
             "description": "OK"
@@ -48,7 +51,10 @@
     },
     "/son": {
       "get": {
-        "description": "",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Endpoint to update all contacts",
         "responses": {
           "200": {
             "description": "OK"
@@ -58,7 +64,10 @@
     },
     "/daughter1": {
       "get": {
-        "description": "",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Endpoint to update all contacts",
         "responses": {
           "200": {
             "description": "OK"
@@ -68,7 +77,10 @@
     },
     "/daughter2": {
       "get": {
-        "description": "",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Endpoint to update all contacts",
         "responses": {
           "200": {
             "description": "OK"
@@ -78,7 +90,10 @@
     },
     "/Age3": {
       "get": {
-        "description": "",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Endpoint to update all contacts",
         "responses": {
           "200": {
             "description": "OK"
@@ -160,6 +175,16 @@
       }
     },
     "/contact": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/meds": {
       "get": {
         "description": "",
         "responses": {
@@ -325,6 +350,80 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/meds/": {
+      "get": {
+        "tags": [
+          "Meds"
+        ],
+        "description": "Endpoint to get all contacts",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/meds/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }

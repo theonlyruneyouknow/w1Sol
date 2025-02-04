@@ -4,6 +4,8 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger-output.json');
 const cors = require('cors');
 
+const os = require('os');
+
 // Configure CORS
 const corsOptions = {
   origin: '*',
@@ -30,15 +32,28 @@ app.set('views', './views');
 app.use('/', require('./routes'))
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-
+function getLocalIP() {
+  const interfaces = os.networkInterfaces();
+  for (const interfaceName of Object.keys(interfaces)) {
+    const addresses = interfaces[interfaceName];
+    for (const addr of addresses) {
+      if (addr.family === 'IPv4' && !addr.internal) {
+        return addr.address;
+      }
+    }
+  }
+  return 'localhost';
+}
 
 mongodb.initDb((err, mongodb) => {
     if (err) {
       console.log(err);
     } else {
         const PORT = process.env.PORT || 4000;
-        app.listen(PORT, () => {
+        const localIP = getLocalIP();
+        app.listen(PORT, '0.0.0.0', () => {
           console.log(`Server is running on http://localhost:${PORT}/api-docs`);
+          console.log(`Network access: https://${localIP}:${PORT}/api-docs`);
         //   app.listen(port);
         //   console.log(`Connected to DB and listening on ${port}`);
         });
