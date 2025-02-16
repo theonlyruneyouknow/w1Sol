@@ -6,13 +6,13 @@ const saveContact = (req, res, next) => {
     Name: 'required|string',
     FillDate: 'required|string',
     Prescription: 'required|string',
-    Rx : 'required|string',
-    Qty: 'required|string',
+    Rx : 'required|integer',
+    Qty: 'required|integer',
     Prescriber: 'required|string',
     Pharmacist: 'required|string',
-    NDC: 'required|string',
+    NDC: 'required|integer',
     Insurance: 'required|string',
-    ClaimReference: 'string',
+    ClaimReference: '',
     Price: 'required|string'
 
 

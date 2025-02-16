@@ -1,14 +1,14 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Contacts API",
-    "description": "W01-W04 CSE 341 - Rune Larsen",
+    "title": "Pharma API",
+    "description": "Week6 CSE 341 - Rune Larsen",
     "name": "Rune",
     "version": "1.0.0",
     "contact": {
       "name": "Rune Larsen",
-      "email": "api@example.com",
-      "url": "http://example.com/contact"
+      "email": "theonlyrune@byui.edu",
+      "url": "http://pharma2.onrender.com/api-docs"
     }
   },
   "host": "localhost:4000",

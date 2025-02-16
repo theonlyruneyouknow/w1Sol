@@ -2,19 +2,19 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
     info: {
-        title: "Contacts API",
-        description: "W01-W04 CSE 341 - Rune Larsen",
+        title: "Pharma API",
+        description: "Week6 CSE 341 - Rune Larsen",
         name: "Rune",
         version: "1.0.0",
         contact: {
             name: "Rune Larsen",
-            email: "api@example.com",
-            url: "http://example.com/contact"
+            email: "theonlyrune@byui.edu",
+            url: "http://pharma2.onrender.com/api-docs"
         },
        
     },
     host: process.env.NODE_ENV === 'production' 
-        ? 'w1sol.onrender.com'
+        ? 'pharma2.onrender.com'
         : 'localhost:4000',
     // host: 'localhost:4000',
     schemes: process.env.NODE_ENV === 'production' 
@@ -60,6 +60,24 @@ const doc = {
         },
         InvalidInput: {
             description: "Invalid input"
+        }
+    },
+    definitions: {
+        
+        Meds: {
+            
+                "Name": "any",
+                "FillDate": "any",
+                "Prescription": "any",
+                "Rx": "Integer",
+                "Qty": "Integer",
+                "Prescriber": "any",
+                "Pharmacist": "any",
+                "NDC": "Integer",
+                "Insurance": "any",
+                "Claim": "any",
+                "Price": "any"
+              
         }
     },
     definitions: {

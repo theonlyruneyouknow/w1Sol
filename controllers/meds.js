@@ -4,7 +4,7 @@ const ObjectId = require('mongodb').ObjectId;
 const getAllMeds = async (req, res, next) => {
   // #swagger.tags = ['Meds']
   // #swagger.description = 'Endpoint to get all MEDS contacts'
-  const result = await mongodb.getDb().db().collection('Meds').find();
+  const result = await mongodb.getDb().db().collection('Pharma2').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
@@ -39,7 +39,7 @@ const updateMeds = async (req, res) => {
   const response = await mongodb
     .getDb()
     .db()
-    .collection('meds')
+    .collection('Pharma2')
     .replaceOne({ _id: userId }, contact);
   console.log(response);
   if (response.modifiedCount > 0) {
@@ -58,7 +58,7 @@ const postsingleMeds = async (req, res, next) => {
     const result = await mongodb
       .getDb()
       .db()
-      .collection('meds')
+      .collection('Pharma2')
       .findOne({ _id: userId });
 
     if (!result) {
@@ -94,7 +94,7 @@ const createMeds = async (req, res) => {
     const response = await mongodb
       .getDb()
       .db()
-      .collection('meds')
+      .collection('Pharma2')
       .insertOne(med);
 
       if (response.acknowledged) {
@@ -121,7 +121,7 @@ const getSingleMeds = async (req, res) => {
     const result = await mongodb
       .getDb()
       .db()
-      .collection('meds')
+      .collection('Pharma2')
       .findOne({ _id: userId });
 
     if (!result) {
@@ -149,7 +149,7 @@ const deleteMeds = async (req, res) => {
     const response = await mongodb
       .getDb()
       .db()
-      .collection('meds')
+      .collection('Pharma2')
       .deleteOne({ _id: userId },true);
       
     if (response.deletedCount > 0) {
