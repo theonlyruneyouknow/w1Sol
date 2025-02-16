@@ -9,7 +9,7 @@ const doc = {
         contact: {
             name: "Rune Larsen",
             email: "theonlyrune@byui.edu",
-            url: "http://pharma2.onrender.com/api-docs"
+            url: "https://pharma2.onrender.com/api-docs"
         },
        
     },

@@ -53,7 +53,7 @@ mongodb.initDb((err, mongodb) => {
         const localIP = getLocalIP();
         app.listen(PORT, '0.0.0.0', () => {
           console.log(`Server is running on http://localhost:${PORT}/api-docs`);
-          console.log(`Network access: https://${localIP}:${PORT}/api-docs`);
+          // console.log(`Network access: https://${localIP}:${PORT}/api-docs`);
         //   app.listen(port);
         //   console.log(`Connected to DB and listening on ${port}`);
         });
