@@ -69,7 +69,8 @@ const doc = {
             lastName: 'Birch',
             email: 'sarah@test.com',
             favoriteColor: 'Blue',
-            birthday: '1990-01-01'
+            birthday: '1990-01-01',
+            Name: 'Rune',
         }
     }
 };
