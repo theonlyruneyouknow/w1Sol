@@ -63,20 +63,72 @@ const doc = {
         }
     },
     definitions: {
+        "post": {
+        "tags": [
+          "Meds"
+        ],
+        "description": "Endpoint to create a Meds test",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "example": "any"
+                },
+                "FillDate": {
+                  "example": "any"
+                },
+                "Prescription": {
+                  "example": "any"
+                },
+                "Rx": {
+                  "example": "integer"
+                },
+                "Qty": {
+                  "example": "integer"
+                },
+                "Prescriber": {
+                  "example": "any"
+                },
+                "Pharmacist": {
+                  "example": "any"
+                },
+                "NDC": {
+                  "example": "any"
+                },
+                "Insurance": {
+                  "example": "any"
+                },
+                "Claim": {
+                  "example": "any"
+                },
+                "Price": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        // }
+        // }
+        ],
+
         
-        Meds: {
+    //     Meds: {
             
-                "Name": "any",
-                "FillDate": "any",
-                "Prescription": "any",
-                "Rx": "Integer",
-                "Qty": "Integer",
-                "Prescriber": "any",
-                "Pharmacist": "any",
-                "NDC": "Integer",
-                "Insurance": "any",
-                "Claim": "any",
-                "Price": "any"
+    //             "Name": "any",
+    //             "FillDate": "any",
+    //             "Prescription": "any",
+    //             "Rx": "Integer",
+    //             "Qty": "Integer",
+    //             "Prescriber": "any",
+    //             "Pharmacist": "any",
+    //             "NDC": "Integer",
+    //             "Insurance": "any",
+    //             "Claim": "any",
+    //             "Price": "any"
               
         }
     },

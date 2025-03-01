@@ -76,6 +76,50 @@ const postsingleMeds = async (req, res, next) => {
 const createMeds = async (req, res) => {
   // #swagger.tags = ['Meds']
   // #swagger.description = 'Endpoint to create a Meds'
+  // #swagger.parameters": [
+        //   {
+        //     "name": "body",
+        //     "in": "body",
+        //     "schema": {
+        //       "type": "object",
+        //       "properties": {
+        //         "Name": {
+        //           "example": "any"
+        //         },
+        //         "FillDate": {
+        //           "example": "any"
+        //         },
+        //         "Prescription": {
+        //           "example": "any"
+        //         },
+        //         "Rx": {
+        //           "example": "any"
+        //         },
+        //         "Qty": {
+        //           "example": "any"
+        //         },
+        //         "Prescriber": {
+        //           "example": "any"
+        //         },
+        //         "Pharmacist": {
+        //           "example": "any"
+        //         },
+        //         "NDC": {
+        //           "example": "any"
+        //         },
+        //         "Insurance": {
+        //           "example": "any"
+        //         },
+        //         "Claim": {
+        //           "example": "any"
+        //         },
+        //         "Price": {
+        //           "example": "any"
+        //         }
+        //       }
+        //     }
+        //   }
+        // ],
   try {
     const meds = {
       Name: req.body.Name,
